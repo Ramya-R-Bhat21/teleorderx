@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: teleorderx-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/teleorderx
+    username: teleorderx_user
+    password: teleorderx_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.hibernate.SQL: debug
